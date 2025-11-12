@@ -2,9 +2,8 @@ name: 🔧 技術任務 (Technical Task)
 description: 用於重構或基礎設施任務。
 title: '[Task] <標題>'
 labels: ['tech-debt', 'refactor']
-assignees: ''
+assignees: []
 
-# --- 表單主體 ---
 body:
   - type: markdown
     attributes:
