@@ -2,14 +2,9 @@ name: 🐞 錯誤回報 (Bug Report)
 description: 提交一個錯誤或問題，幫助我們改善。
 title: '[BUG] <標題>'
 labels: ['bug', 'needs-triage']
-assignees: ''
+assignees: []
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        感謝你花時間回報問題！請盡可能詳細填寫以下資訊，這將有助於我們更快地重現並修復問題。
-
   - type: textarea
     id: description
     attributes:
