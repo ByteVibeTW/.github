@@ -74,9 +74,8 @@ body:
   - type: textarea
     id: screenshots
     attributes:
-      value: |
-        **📸 截圖或影片 (Screenshots / Video)**
-        請將截圖或影片直接拖曳到下方的補充資訊欄位中。
+      label: 📸 截圖或影片 (Screenshots / Video)
+      description: 請將截圖或影片直接拖曳到下方的補充資訊欄位中。
     validations:
       required: false
 
