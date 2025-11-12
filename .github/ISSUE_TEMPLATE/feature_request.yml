@@ -2,9 +2,8 @@ name: ✨ 功能請求 (Feature Request)
 description: 提出一個新功能的點子。
 title: '[Feature] <標題>'
 labels: ['enhancement', 'needs-triage']
-assignees: ''
+assignees: []
 
-# --- 表單主體 ---
 body:
   - type: markdown
     attributes:
