@@ -1,0 +1,61 @@
+name: 🔧 技術任務 (Technical Task)
+description: 用於重構或基礎設施任務。
+title: '[Task] <標題>'
+labels: ['tech-debt', 'refactor']
+assignees: ''
+
+# --- 表單主體 ---
+body:
+  - type: markdown
+    attributes:
+      value: |
+        這是一個內部的技術任務，用於改善程式碼品質、效能或維護性。
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 任務目標 (Objective)
+      description: 請描述這個技術任務的最終目的是什麼。
+      placeholder: |
+        例如：
+        - 將 'X' 模組進行重構以提高可讀性
+        - 升級 'Y' 套件至最新版本
+        - 優化 'Z' API 的回應時間
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: 📝 為什麼需要做？ (Why is this necessary?)
+      description: 請說明執行此任務的理由（例如：解決什麼痛點）。
+      placeholder: |
+        例如：
+        - 目前的程式碼難以維護且容易出錯
+        - 舊版套件存在已知的安全漏洞
+        - 使用者回報頁面載入緩慢
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 📋 驗收標準 (Acceptance Criteria)
+      description: 請列出完成此任務的具體、可衡量的標準。
+      placeholder: |
+        - [ ] 程式碼已重構並通過 Code Review
+        - [ ] 所有相關的單元測試皆已通過
+        - [ ] 依賴套件已更新至 vX.X.X
+        - [ ] 效能指標（例如：LCP）提升了 X%
+        - [ ] 相關文件已更新
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-suggestions
+    attributes:
+      label: ⚙️ 建議的實作方向 (Implementation Suggestions)
+      description: (選填) 是否有建議的特定做法、需要注意的地方或相關文件？
+      render: markdown # 支援貼上程式碼片段或文件連結
+    validations:
+      required: false

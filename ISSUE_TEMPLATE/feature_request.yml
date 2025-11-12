@@ -1,0 +1,71 @@
+name: ✨ 功能請求 (Feature Request)
+description: 提出一個新功能的點子。
+title: '[Feature] <標題>'
+labels: ['enhancement', 'needs-triage']
+assignees: ''
+
+# --- 表單主體 ---
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝你提出新功能的建議！請詳細說明這個功能能解決什麼問題，以及你希望它如何運作。
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 🚀 功能領域 (Area)
+      description: 這個功能主要涉及哪個部分？（這有助於我們分類）
+      options:
+        - '前端 (Frontend)'
+        - '後端 (Backend)'
+        - '全端 (Fullstack)'
+        - '文件 (Docs)'
+        - '其他 (Other)'
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: ❓ 這是什麼問題？ (The Problem)
+      description: 請清楚描述你希望解決的問題或遇到的痛點。
+      placeholder: '例如：我總是因為 [...] 而感到沮喪，因為...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 你的解決方案 (Proposed Solution)
+      description: 請清楚描述你希望實現的功能是什麼樣子。
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 你考慮過的替代方案 (Alternatives Considered)
+      description: 是否有其他方式可以（或你已經在）解決這個問題？
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 📋 驗收標準 (Acceptance Criteria)
+      description: (選填) 你認為這個功能需要滿足哪些條件才算完成？
+      placeholder: |
+        - [ ] 當我...
+        - [ ] 我應該能看到...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 🖼️ 補充資訊 (Additional Context)
+      description: 任何關於這個功能請求的補充資訊（例如：設計稿、流程圖、其他參考範例...等）。
+      render: markdown
+    validations:
+      required: false

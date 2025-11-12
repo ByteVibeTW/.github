@@ -1,0 +1,91 @@
+name: 🐞 錯誤回報 (Bug Report)
+description: 提交一個錯誤或問題，幫助我們改善。
+title: '[BUG] <標題>'
+labels: ['bug', 'needs-triage']
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝你花時間回報問題！請盡可能詳細填寫以下資訊，這將有助於我們更快地重現並修復問題。
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 🐛 錯誤描述 (Description)
+      description: 請清楚且簡潔地描述你遇到的錯誤。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 👟 重現步驟 (Steps to Reproduce)
+      description: 請一步一步地說明如何重現這個錯誤。
+      placeholder: |
+        1. 前往 '...'
+        2. 點擊 '....'
+        3. 捲動到 '....'
+        4. 看到錯誤
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: ✅ 預期行為 (Expected Behavior)
+      description: 請描述你原本預期會發生什麼事。
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: 😥 實際行為 (Actual Behavior)
+      description: 請描述實際發生了什麼事，如果方便請附上錯誤訊息。
+    validations:
+      required: false
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 💻 你的作業系統 (OS)
+      description: 你在哪個作業系統上遇到這個問題？
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - iOS
+        - Android
+        - Other (請在下方補充)
+    validations:
+      required: false
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: 🌐 瀏覽器與版本 (Browser)
+      description: 如果是網頁相關錯誤，請提供。
+      placeholder: '例如：Chrome 100.0, Safari 15.0'
+    validations:
+      required: false
+
+  - type_key: 'markdown'
+    attributes:
+      value: |
+        **📸 截圖或影片 (Screenshots / Video)**
+        請將截圖或影片直接拖曳到下方的補充資訊欄位中。
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📄 補充資訊 (Additional Context)
+      description: |
+        任何你覺得可能相關的資訊（例如：瀏覽器 console 的錯誤日誌、網路請求...等）
+        你可以在這裡貼上截圖或日誌。
+      render: shell
+    validations:
+      required: false
